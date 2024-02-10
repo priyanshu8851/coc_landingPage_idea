@@ -1,0 +1,106 @@
+header{
+    position:fixed;
+    top:0;
+    right:0;
+    z-index:1000;
+    height:75px;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin:0 20px; */
+    /* background-color: black; */
+}
+.logo{
+    margin-left: 50px;
+    font-size: 30px;
+    font-weight: 700;
+    color:#fff;
+}
+.nav_elements{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+    margin-right: 50px;
+}
+.nav_elements a{
+    
+    color:#fff;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all 0.55s ease;
+}
+.nav_elements a:hover{
+    border-bottom: 2px solid #fff;
+}
+.menuBar{
+    display: none;
+}
+.hamMenu{
+    display: none;
+}
+.bar{
+    height:3px;
+    width:30px;
+    background-color: #fff;
+}
+@media screen and (max-width:1600px) {
+    .logo{
+        margin-left: 30px;
+        transition: 0.5s ease;
+    }
+    .nav_elements{
+        gap:30px;
+        margin-right: 30px;
+        transition: 0.3s;
+    }
+}
+@media screen and (max-width:1000px) {
+    .hamMenu{
+        z-index:1009;
+        right:50px;
+        transition: all ease 0.8s;
+    }
+    .menuBar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index:999999;
+        gap:4px;
+        transition: ease 0.9s;
+        right:42px;
+        position: relative;
+    }
+    .nav_elements{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top:0px;
+        margin-right:-30px;
+        width:170px;
+        height:100vh;
+        gap:20px;
+        z-index: 999999;
+        background-color: rgba(128, 128, 128, 0.281);
+        transition: all 0.5s ease;
+        backdrop-filter: blur(20px);
+        right: -200px;
+    }
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .show{
+        right: 30px;
+    }
+}
+@media screen and (max-width:350px) {
+  .logo{
+    font-size: 16px;;
+  }
+}
